@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    <script src=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
+    <title>Customer Analytics</title>
+</head>
+
+<body>
+
+    
+
+    <div style="display:inline-block;vertical-align:top;"><br>
+        <a href="index.html"><img style="margin-left: 10px;" src='https://d9jmtjs5r4cgq.cloudfront.net/images/branding/greatlearning-brand-v1-2.svg' alt="img"/></a>
+    </div>
+
+    <div style="display:inline-block;vertical-align:top; margin-left:1050px; margin-bottom:-200px;"><br>
+        <img style="width:450px; height:250px; margin-top:-100px; border: 5px solid #000;" src='/static/Right.png' alt="img"/>
+    </div>
+        <div style="display:inline-block;">
+            <p style="margin-top:-60px; margin-left:375px; font-size: 30px;"><b>Capstone Project On Customer Analytics</b></p>
+            <br>
+            <p style="margin-top:-10px; margin-left:610px; font-size:20px; font-weight: bold;">
+                Batch - 03 <br></p>
+            <p style="margin-top:10px; margin-left:550px; font-size:20px; font-weight: bold;">
+            Mentor : Jatinder Bedi <br></p>
+            <p style="margin-top:20px; margin-left:630px; font-size:20px; font-weight: bold;">
+        Team</p><br>
+        </div>
+
+        <div class="name_container">
+            <p>
+                Talla Sai Gokul Reddy <br>
+                Rajeshwar Paul <br>
+                Abhishek Jha <br>
+                Tangirala Ananda Datta Sai Phanindra
+             </p>
+        </div>
+        
+
+        
+<form style="margin-top:80px;"class="form-inline" action="{{ url_for('classify')}}" method="post">
+
+<label style="margin-left: 50px;">Cost Price(USD): </label> 
+<input id="first" class="form-control" name="Cost_Price" type="float" required="required">
+
+<label style="margin-left: 50px;">Quantity: </label>
+<input id="first" class="form-control" name="Quantity" type="number" required="required">
+
+<label style="margin-left: 50px;">Discount Percent: </label>
+<input id="first" name="Discount_Percent" type="float" required="required">
+
+<label style="margin-left: 50px;">Shipping Cost(USD): </label>
+<input id="first" class="form-control" name="Shipping_Cost" type="float" required="required">
+
+<label style="margin-left: 50px;">Days to Ship: </label>
+<input id="first" class="form-control" name="Days_to_Ship" type="number" required="required">
+
+<br><br><br>
+
+
+<label style="margin-left: 65px;">Segment: </label><select name="segment_" id="second_" class="form-control" required="required">
+    <option value="Consumer">Consumer</option>
+    <option value="Home Office">Home Office</option>
+    <option value="Corporate">Corporate</option>
+</select>
+
+<label style="margin-left: 65px;">Market: </label><select name="market_" id="second_" class="form-control" required="required">
+    <option value="Africa">Africa</option>
+    <option value="APAC">APAC</option>
+    <option value="EMEA">EMEA</option>
+    <option value="EU">EU</option>
+    <option value="Canada">Canada</option>
+    <option value="LATAM">LATAM</option>
+    <option value="US">US</option>
+</select>
+
+<label style="margin-left: 65px;">Region: </label><select name="region_" id="second_" class="form-control" required="required">
+    <option value="Africa">Africa</option>
+    <option value="Oceania">APAC</option>
+    <option value="EMEA">EMEA</option>
+    <option value="North">North</option>
+    <option value="Canada">Canada</option>
+    <option value="Southeast Asia">Southeast Asia</option>
+    <option value="Central">Central</option>
+    <option value="South">South</option>
+    <option value="Caribbean">Caribbean</option>
+    <option value="North Asia">North Asia</option>
+    <option value="East">East</option>
+    <option value="West">West</option>
+    <option value="Central Asia">Central Asia</option>
+</select>
+
+
+<label style="margin-left: 65px;">Category: </label><select name="category_" id="second_" class="form-control" required="required">
+<option value="Office Supplies">Office Supplies</option>
+<option value="Furniture">Furniture</option>
+<option value="Technology">Technology</option>
+</select>
+
+<label style="margin-left: 65px;">Order Priority: </label><select name="order_priority_" id="second_" class="form-control" required="required">
+<option value="Medium">Medium</option>
+<option value="High">High</option>
+<option value="Critical">Critical</option>
+<option value="Low">Low</option>
+</select>
+
+
+<button style="margin-left:650px; margin-top:80px;" id="sub" type="submit">Classify The Customer</button>
+<br>
+
+</form>
+
+            <style>
+                body {
+                    background-color: lightgoldenrodyellow;
+                    padding: 0px;
+                    align-content: center;
+                }
+        
+                
+        
+                
+                #sub {
+                    width: 200px;
+                    height: 50px;
+                    text-align: center;
+                    border-radius: 14px;
+                    font-size: 18px;
+                }
+                
+                #sub:hover {
+                    background-color: cyan;
+                    width: 200px;
+                    height: 50px;
+                    text-align: center;
+                    border-radius: 14px;
+                    font-size: 18px;
+                }
+                
+                #first {
+                    border-radius: 14px;
+                    height: 25px;
+                    width: 120px;
+                    font-size: 15px;
+                    text-align: center;
+                    font-weight: bold;
+                }
+
+                #second_ {
+                    border-radius: 15px;
+                    height: 50px;
+                    width: 160px;
+                    font-size: 15px;
+                    text-align: center;
+                    font-weight: bold;
+                    
+                }
+                .name_container {
+                    width: 87%;
+                    font-weight: bold;
+                    align-content: center;
+                    text-align: center;
+                    
+
+                }
+                
+            </style>
+        </body>
+        
+        </html>

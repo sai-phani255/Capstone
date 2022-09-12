@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    <script src=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
+    <title>Customer Classification</title>
+</head>
+
+<body>
+
+    <div style="display:inline-block;vertical-align:top;"><br>
+       <a href="index.html"><img style="margin-left: 10px;" src='https://d9jmtjs5r4cgq.cloudfront.net/images/branding/greatlearning-brand-v1-2.svg' alt="img"/></a>
+    </div>
+
+    <div style="display:inline-block;vertical-align:top; margin-left:1050px; margin-bottom:-200px;"><br>
+        <img style="width:450px; height:250px; margin-top:-100px; border: 5px solid #000;" src='/static/Right.png' alt="img"/>
+    </div>
+        <div style="display:inline-block;">
+            <p style="margin-top:-60px; margin-left:375px; font-size: 30px;"><b>Capstone Project On Customer Analytics</b></p>
+            <br>
+            <p style="margin-top:-10px; margin-left:610px; font-size:20px; font-weight: bold;">
+                Batch - 03 <br></p>
+            <p style="margin-top:10px; margin-left:550px; font-size:20px; font-weight: bold;">
+            Mentor : Jatinder Bedi <br></p>
+            <p style="margin-top:20px; margin-left:630px; font-size:20px; font-weight: bold;">
+        Team</p><br>
+        </div>
+
+        <div class="name_container">
+            <p>
+                Talla Sai Gokul Reddy <br>
+                Rajeshwar Paul <br>
+                Abhishek Jha <br>
+                Tangirala Ananda Datta Sai Phanindra
+             </p>
+        </div>
+
+        <br><p style="margin-left:420px; font-size:30px; font-weight:bold; color:red;">Classification:- {{prediction_text}}</p><br>
+
+        <p style="margin-left:120px; font-size:25px; font-weight:bold;">Given Input</p><br>
+
+        <div class="form-inline" style="margin-left: 80px; font-size:18px;">
+
+
+        <label style="margin-left: 40px;">Cost Price : {{costprice}}</label>
+        <label style="margin-left: 40px;">Quantity : {{quantity}}</label>
+        <label style="margin-left: 40px;">Discount Percent: {{disc_percent}}</label>
+        <label style="margin-left: 40px;">Shipping Cost : {{shippingcost}}</label>
+        <label style="margin-left: 40px;">Days To Ship : {{daystoship}}</label> <br><br>
+
+        <label style="margin-left: 50px;">Segment : {{segment}}</label>
+        <label style="margin-left: 50px;">Market : {{market}}</label>
+        <label style="margin-left: 50px;">Region : {{region}}</label>
+        <label style="margin-left: 50px;">Category : {{category}}</label>
+        <label style="margin-left: 50px;">Order Priority : {{orderpriority}}</label>
+
+        </div>
+        <br><p style="margin-left:650px; font-size:30px; font-weight:bold; color:Blue">"Thank You"</p>
+
+        <style>
+            body {
+                background-color: lightgoldenrodyellow;
+                padding: 0px;
+                align-content: center;
+            }
+    
+            
+    
+
+            .name_container {
+                width: 87%;
+                
+                font-weight: bold;
+                align-content: center;
+                text-align: center;
+                
+
+            }
+            
+        </style>
+        
+    </body>
