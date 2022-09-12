@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Analytics</title>
+</head>
+
+<body>
+
+
+
+    <div style="display:inline-block;vertical-align:top;">
+        <img src='https://d9jmtjs5r4cgq.cloudfront.net/images/branding/greatlearning-brand-v1-2.svg' alt="img"/>
+    </div>
+        <div style="display:inline-block;">
+            <p style="margin-top:-2px; margin-left:400px; font-size: 50px;">Batch - 03</p>
+            <p style="margin-top:-40px; margin-left:300px; font-size: 25px;"><b>Capstone Project On Customer Analytics</b></p>
+        </div>
+
+<form action="{{ url_for('classify')}}" method="post">
+
+<h3>Cost Price(USD)</h3><br>
+<input id="first" name="Cost_Price" type="float" required="required">
+
+<h3>Quantity</h3>
+<input id="first" name="Quantity" type="number" required="required">
+
+
+<h3>Discount Percent</h3><br>
+<input id="first" name="Discount_Percent" type="float" required="required">
+
+<h3>Shipping Cost(USD)</h3><br>
+<input id="first" name="Shipping_Cost" type="float" required="required"><br>
+
+<h3>Days to Ship</h3><br>
+<input id="first" name="Days_to_Ship" type="number" required="required"><br>
+<h3>Segment</h3><br><select name="segment_" id="first" required="required">
+    <option value="Consumer">Consumer</option>
+    <option value="Home Office">Home Office</option>
+    <option value="Corporate">Corporate</option>
+</select>
+
+<h3>Market</h3><br><select name="market_" id="first" required="required">
+    <option value="Africa">Africa</option>
+    <option value="APAC">APAC</option>
+    <option value="EMEA">EMEA</option>
+    <option value="EU">EU</option>
+    <option value="Canada">Canada</option>
+    <option value="LATAM">LATAM</option>
+    <option value="US">US</option>
+</select><br>
+
+<h3>Region</h3><br><select name="region_" id="first" required="required">
+    <option value="Africa">Africa</option>
+    <option value="Oceania">APAC</option>
+    <option value="EMEA">EMEA</option>
+    <option value="North">North</option>
+    <option value="Canada">Canada</option>
+    <option value="Southeast Asia">Southeast Asia</option>
+    <option value="Central">Central</option>
+    <option value="South">South</option>
+    <option value="Caribbean">Caribbean</option>
+    <option value="North Asia">North Asia</option>
+    <option value="East">East</option>
+    <option value="West">West</option>
+    <option value="Central Asia">Central Asia</option>
+</select><br>
+
+
+<h3>Category</h3><br><select name="category_" id="first" required="required">
+<option value="Office Supplies">Office Supplies</option>
+<option value="Furniture">Furniture</option>
+<option value="Technology">Technology</option>
+</select><br>
+
+<h3>Order Priority</h3><br><select name="order_priority_" id="first" required="required">
+<option value="Medium">Medium</option>
+<option value="High">High</option>
+<option value="Critical">Critical</option>
+<option value="Low">Low</option>
+</select><br>
+
+
+
+<br><br><button id="sub" type="submit">Classify The Customer</button>
+<br>
+
+</form>
+
+        <br><br><h3>{{prediction_text}}<h3>
+
+
+            <style>
+                body {
+                    background-color: lightgoldenrodyellow;
+                    padding: 0px;
+                    align-content: center;
+                }
+        
+                
+        
+                
+                #sub {
+                    width: 120px;
+                    height: 43px;
+                    text-align: center;
+                    border-radius: 14px;
+                    font-size: 18px;
+                }
+                
+                #sub:hover {
+                    background-color: cyan;
+                    border-radius: 14px;
+                    height: 45px;
+                    width: 150px;
+                    font-size: 15px;
+                    text-align: center;
+                }
+                
+                #first {
+                    border-radius: 14px;
+                    height: 25px;
+                    font-size: 20px;
+                    text-align: center;
+                }
+                
+            </style>
+        </body>
+        
+        </html>
